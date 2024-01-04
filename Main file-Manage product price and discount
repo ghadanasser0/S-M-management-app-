@@ -1,0 +1,20 @@
+public class Main
+{
+    public static void main (String args[])
+    {
+        double [] productoriginalprice = {100,150,70,250,15,350,0.3};
+        double [] discount = {20,10,0,15,25,50,0};
+        for (int i =0; i<productoriginalprice.length; i++ )
+        {
+            double finalproductprice = (productoriginalprice[i] - (productoriginalprice[i] * discount[i]/100));
+            
+            if(finalproductprice< productoriginalprice[i])
+            {
+                System.out.println("product" + (i+1) + ":the product price after discount is:"+finalproductprice );
+            }
+            else
+            {
+               System.out.println("product" + (i+1) + ":No discount for this product:" ); 
+            }
+        }
+    }
